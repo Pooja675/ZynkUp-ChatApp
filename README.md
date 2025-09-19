@@ -63,7 +63,7 @@ ZynkUp Chat App – A real-time messaging platform with secure authentication, p
 
 ## 🌐 Live Demo
 
-Experience Codify in action: [https://zynkup-chatapp.onrender.com/auth](https://zynkup-chatapp.onrender.com/auth)
+Experience ZynkUp Chat App in action: [https://zynkup-chatapp.onrender.com/auth](https://zynkup-chatapp.onrender.com/auth)
 
 ### Demo Accounts
 

@@ -149,7 +149,7 @@ You might need to run both the client and server simultaneously for fetching dat
 ## 📁 Project Structure
 
 ```
-client/
+zynkup/
 ├── public/             # Static files
 ├── src/
 │   ├── components/     # Reusable UI components

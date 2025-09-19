@@ -173,7 +173,7 @@ server/
 └── socket.js           # Integrated real-time messages
 
 ```
-## 🎯 Result and Conclusion
+### 🎯 Result and Conclusion
 
     ZynkUp Chat App delivers a seamless real-time communication experience with secure authentication, responsive design, and engaging features like file sharing, group chats, and emoji support. It provides a reliable, user-friendly platform for smooth and interactive conversations across devices.
 

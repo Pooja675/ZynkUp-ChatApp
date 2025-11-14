@@ -63,11 +63,7 @@ app.use(
 
 
 app.use("/uploads/profiles", express.static("uploads/profiles"))
-app.use("/uploads/files", express.static("uploads/files", {
-  setHeaders: (res) => {
-    res.set("Access-Control-Allow-Origin", "*"); // or specific frontend URL
-  }
-}))
+app.use("/uploads/files", express.static("uploads/files"))
 
 app.use(cookieParser());
 app.use(express.json())

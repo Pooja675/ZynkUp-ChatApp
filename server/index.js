@@ -13,7 +13,7 @@ import path from "path"
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5555;
 const databaseURL = process.env.DATABASE_URL;
 const _dirname = path.resolve()
 
@@ -26,16 +26,40 @@ const _dirname = path.resolve()
 //     })
 // )
 
+// app.use(
+//   cors({
+//     origin:
+//       process.env.ORIGIN === "*"
+//         ? true
+//         : (process.env.ORIGIN || "http://localhost:5173").trim(),
+//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+//     credentials: true,
+//   })
+// );
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://zynkup-chatapp.onrender.com"
+];
+
 app.use(
   cors({
-    origin:
-      process.env.ORIGIN === "*"
-        ? true
-        : (process.env.ORIGIN || "http://localhost:5173").trim(),
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    origin: function (origin, callback) {
+      // Allow requests with no origin (e.g., mobile apps, curl)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );
+
+
 
 
 app.use("/uploads/profiles", express.static("uploads/profiles"))

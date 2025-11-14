@@ -1,9 +1,9 @@
-export const HOST = import.meta.env.VITE_SERVER_URL;
+// export const HOST = import.meta.env.VITE_SERVER_URL;
 
-// export const HOST =
-//   import.meta.env.MODE === "development"
-//     ? import.meta.env.VITE_SERVER_URL || "http://localhost:5555"
-//     : window.location.origin;
+export const HOST =
+  import.meta.env.MODE === "development"
+    ? import.meta.env.VITE_SERVER_URL || "http://localhost:5555"
+    : import.meta.env.VITE_RENDER_BACKEND_URL;
 
 export const AUTH_ROUTES = "/auth";
 export const SIGNUP_ROUTE = `${AUTH_ROUTES}/signup`;
